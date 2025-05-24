@@ -1,14 +1,150 @@
-<html>
+<html lang="en">
 <header>
 <style>
 
-.search-box {
+@media only screen and (min-width: 900px) {
+  .title{
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .title{
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .title{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .title{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  .title{
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+html {
+  font-family: roboto;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+  background-image: url("DynamicBackDrop.gif");
+      background-position: absolute;
+      background-attachment: fixed, scroll;
+      background-size: cover;
+      background-repeat: repeat;
+}
+
+body {
+
+      background-image: url("DynamicBackDrop.gif");
+      background-position: absolute;
+      background-attachment: fixed, scroll;
+      background-size: cover;
+      background-repeat: repeat;
+      width: 3440;
+      height: 1440;
+      color:#fff;
+      position: absolute;
+} 
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.sidebar {
+  display: fixed;
+  position: absolute;
   width: fit-content;
   height: fit-content;
-  position: absolute;
-  margin-bottom: 500px;
-  bottom: 0;
+  width: 20%;
+  height: -500px;
+  margin:0 0 0 1000px;
+  margin-left: -142;
+  margin-top: 120;
+  background: #00000059;
+  font-size: 0.65em;
+  filter: brightness(70%);
+}
+
+.nav {
+  position: relative;
+  margin: 15%;
+  text-align: right;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  
+  li {
+    position: relative;
+    margin: 7.8em 0;
+    
+    a {
+      line-height: 5em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color: rgba(#FFF, 0.35);
+      display: block;
+      transition: all ease-out 300ms;
+    }
+    
+    &.active a {
+      color: white;
+    }
+    
+    &:not(.active)::after {
+      opacity: 0.2;
+    }
+    
+    &:not(.active):hover a {
+      color: rgba(#FFF, 0.75);
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.2em;
+      background: black;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, #5e42a6, #b74e91);
+      filter: brightness(100);
+    }
+  }
+}
+
+  
+  a {
+    position: relative;
+    
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .search-box {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  bottom: 750px;
   max-width: 100%;
+  filter:brightness(90%)
 }
 .input-search {
   height: 50px;
@@ -23,292 +159,184 @@
   background-color: rgba(31, 6, 255, 0);
   padding-right: 40px;
   color:#fff;
-  filter:opacity(80%)
 }
-
-body {
-
-    background-image: url("DynamicBackDrop.gif");
-      background-position: absolute;
-      background-attachment: fixed, scroll;
-      background-size: cover;
-      background-repeat: repeat;
-      width: 3440;
-      height: 1440;
-      color:#fff;
-      overflow: hidden;
-      position: absolute;
-      filter:brightness(80%)
-      
-}
-
+ 
 .iframe1 {
-      height: 240;
-      width: 320;
-      padding: 0.5px;
-      padding-bottom: 5px;
-      border: 1px;
+  position: relative;
+  top: auto;
+  height: 240px;
+  width: 320px;
+  border: none;
+  transition: filter 20s ease;
 }
 
-.box-shadow {
+.iframe-container {
 
-    border: none;
-    box-shadow: 10px 5px 5px rgba(255, 179, 0, 0.235);
+position: relative;
+width: 10%;
+overflow: hidden;
+margin-top: 700px;
+filter: brightness(100%);
+padding: 3px;
 }
 
-.Title1 {
-    font-size: x-large;
-    font-weight: bold;
-    position: absolute;
-    margin-top: 225px;
-    filter:brightness(80%)
-}
+.boxshadow {
 
-.Title2 {
-
-    font-size: x-large;
-    font-weight: bold;
-    position: center;
-    left: 10px;
-    top: 0px;
-    padding-top:10px;
-    filter:brightness(80%) 
-
+  box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
 
 }
 
-.Preview-1 {
+.iframe-container1 {
 
-    margin-left: -43px;
-    align-content: center;
-    margin-top: 250px;
-    
+position: relative;
+margin-top: auto;
+width: 100%;
+overflow: hidden;
+filter: brightness(100%);
 }
 
-.Preview-2 {
+.h1 {
 
-    margin-left: -43px;
-    margin-top: 25px;
-    align-content: center;
-
+  margin-top: -1000px;
+  filter: brightness(70%);
+  letter-spacing: 1px;
+  font-size: 34px;
+  padding-left: 0px;
+  position: static;
 }
 
-.showmore {
-  width: fit-content;
-  height: fit-content;
-  position: absolute;
-  opacity: 50%;
-  border-style: none;
-  padding: 5px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  transition: all .3s ease-in-out;
-  background-color: rgba(31, 6, 255, 0.1);
-  outline: none;
-  color:#fff;
+.h2 {
+
+margin-top: 300px;
+filter: brightness(70%);
+letter-spacing: 1px;
+font-size: 34px;
+padding-left: 24px;
+position: static;
 }
 
-.showmorepos {
-  width: fit-content;
-  height: fit-content;
-  position: absolute;
-  margin-left: -650px;
-  opacity: 50%;
-  border-style: none;
-  padding: 5px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  transition: all .3s ease-in-out;
-  background-color: rgba(31, 6, 255, 0.1);
-  outline: none;
-  color:#fff;
-    
+.h3 {
+margin-top: 300px;
+filter: brightness(70%);
+letter-spacing: 1px;
+font-size: 34px;
+padding-left: 24px;
+position: static;  
 }
 
-.showmorepos2 {
+.div2 {
 
-  width: fit-content;
-  height: fit-content;
-  position: absolute;
-  margin-left: -977px;
-  opacity: 50%;
-  border-style: none;
-  padding: 5px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  transition: all .3s ease-in-out;
-  background-color: rgba(31, 6, 255, 0.1);
-  outline: none;
-  color:#fff;
+  margin-top: -600px;
 }
 
-.showmorepos3 {
+.div3 {
 
-width: fit-content;
-height: fit-content;
-position: absolute;
-margin-left: -650px;
-opacity: 50%;
-border-style: none;
-padding: 5px;
-font-size: 18px;
-letter-spacing: 2px;
-transition: all .3s ease-in-out;
-background-color: rgba(31, 6, 255, 0.1);
-outline: none;
-color:#fff;
+margin-top: -600px;
 }
-
-.showmorepos4 {
-
-width: fit-content;
-height: fit-content;
-position: absolute;
-margin-left: -647px;
-opacity: 50%;
-border-style: none;
-padding: 5px;
-font-size: 18px;
-letter-spacing: 2px;
-transition: all .3s ease-in-out;
-background-color: rgba(31, 6, 255, 0.1);
-outline: none;
-color:#fff;
-}
-
-.showmorepos5 {
-
-width: fit-content;
-height: fit-content;
-position: absolute;
-margin-left: 650px;
-opacity: 50%;
-border-style: none;
-padding: 5px;
-font-size: 18px;
-letter-spacing: 2px;
-transition: all .3s ease-in-out;
-background-color: rgba(31, 6, 255, 0.1);
-outline: none;
-color:#fff;
-}
-
-.button {
-  border: 0 solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  outline: 1px solid;
-  outline-color: rgba(255, 255, 255, .5);
-  outline-offset: 0px;
-  text-shadow: none;
-  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1) rgba (255, 0, 0, 0.2);
-} 
-
-.button1 {
-  border: 1px;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 0, 0, 0.2);
-  outline: none 
-
-}  
 
 </style>
 </header>
 <body>
 
-<div 
-class="search-box">
-<input 
-type="text" class="input-search" placeholder="Type to Search...">
-</input>
+ <main class="main">
+  <aside class="sidebar">
+    <nav class="nav">
+      <ul>
+        <li class="active"><a href="#">Welcome</a></li>
+        <li><a href="#">Who We Are</a></li>
+        <li><a href="#">Why Noize And Not Twitch</a></li>
+        <li><a href="#">Get In Touch</a></li>
+      </ul>
+    </nav>
+  </aside>
+</main>
+
+
+
+<div>
+<iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe> 
 </div>
 
+<div class="div2">
+  <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe> 
+  </div>
 
-<h2  class="Title1">Gaming</h2>
-<div class="Preview-1">
-<ul  class="ul.no-bullets">
-<iframe 
-     class="iframe1 box-shadow" src="https://stream.portalchat.app/embed/video" scrolling="no">
-</iframe>
+  <div class="div3">
+    <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container boxshadow" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe> 
+    </div>
 
-<a href="https://stream.portalchat.app">
-<button 
-class="showmore button button1"> Interested? Click Here!!
-</button>
-</a>
+  <p class="h1">
+    Gaming
+  </p>
 
-<iframe
-    class="iframe1 box-shadow" src="https://Your.DOMAIN.Here" scrolling="no">
-</iframe>
+  <p class="h2">
+    Creative
+  </p>
 
-<a href="https://Your.Domain.Here">
-    <button 
-    class="showmorepos button button1"> Interested? Click Here!!
-    </button>
-</a>
-</ul>
-</div>
+  <p class="h3">
+    Chill
+  </p>
 
-<h3  class="Title2">Creative</h3>
-<div class="Preview-2">
-<ul  class="ul.no-bullets">
-<iframe
-     class="iframe1 box-shadow" src="https://Your.DOMAIN.Here" scrolling="no">   
-</iframe>
 
-<a href="https://Your.Domain.Here">
-    <button 
-    class="showmore button button1"> Interested? Click Here!!
-    </button>
-</a>
 
-<iframe
+    <div 
+    class="search-box">
+    <input 
+    type="text" class="input-search" placeholder="Type to Search...">
+    </input>
+    </div>
 
-     class="iframe1 box-shadow" src="https://Your.DOMAIN.Here" scrolling="no">
-</iframe>
 
-<a href="https://Your.Domain.Here">
-    <button 
-    class="showmorepos5 button button1"> Interested? Click Here!!
-    </button>
-</a>
 
-<iframe
 
-     class="iframe1 box-shadow" src="https://Your.DOMAIN.Here" scrolling="no">
-</iframe>
 
-<a href="https://Your.Domain.Here">
-    <button 
-    class="showmorepos2 button button1"> Interested? Click Here!!
-    </button>
-</a>
-
-<iframe
-
-     class="iframe1 box-shadow" src="https://Your.DOMAIN.Here" scrolling="no">
-</iframe>
-
-<a href="https://Your.Domain.Here">
-    <button 
-    class="showmorepos3 button button1"> Interested? Click Here!!
-    </button>
-</a>
-
-<iframe
-
-     class="iframe1 box-shadow" src="https://Your.DOMAIN.Here" scrolling="no">
-</iframe>
-
-<a href="https://Your.Domain.Here">
-    <button 
-    class="showmorepos4 button button1"> Interested? Click Here!!
-    </button>
-</a>
-</ul>
-</div>
 </body>
-
-
-
-
-
 </html>
