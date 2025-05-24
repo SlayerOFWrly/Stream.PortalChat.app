@@ -1,0 +1,347 @@
+<html lang="en">
+<header>
+<style>
+
+@media only screen and (min-width: 900px) {
+  .title{
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .title{
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .title{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .title{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 3840px) {
+  .title{
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+html {
+      font-family: roboto;
+      scrollbar-color: transparent transparent;
+      scrollbar-width: thin;
+      background-image: url("DynamicBackDrop.gif");
+      background-position: absolute;
+      background-attachment: fixed, scroll;
+      background-size: cover;
+      background-repeat: repeat;
+}
+
+body {
+
+      background-image: url("DynamicBackDrop.gif");
+      background-position: absolute;
+      background-attachment: fixed, scroll;
+      background-size: cover;
+      background-repeat: repeat;
+      width: 3440;
+      height: 1440;
+      color:#fff;
+      position: absolute;
+} 
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.sidebar {
+  display: fixed;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  width: 20%;
+  height: -500px;
+  margin:0 0 0 1000px;
+  margin-left: -142;
+  margin-top: 120;
+  background: #00000059;
+  font-size: 0.65em;
+  filter: brightness(70%);
+}
+
+.nav {
+  position: relative;
+  margin: 15%;
+  text-align: right;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  
+  li {
+    position: relative;
+    margin: 7.8em 0;
+    
+    a {
+      line-height: 5em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color: rgba(#FFF, 0.35);
+      display: block;
+      transition: all ease-out 300ms;
+    }
+    
+    &.active a {
+      color: white;
+    }
+    
+    &:not(.active)::after {
+      opacity: 0.2;
+    }
+    
+    &:not(.active):hover a {
+      color: rgba(#FFF, 0.75);
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.2em;
+      background: black;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, #5e42a6, #b74e91);
+      filter: brightness(100);
+    }
+  }
+}
+
+  
+  a {
+    position: relative;
+    
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .search-box {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  bottom: 1200px;
+  max-width: 100%;
+  margin-left: 47.2%;
+  filter:brightness(90%)
+}
+.input-search {
+  height: 50px;
+  width: 500px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-radius: 12px;
+  outline: none;
+  transition: all 3s ease-in-out;
+  background-color: rgba(31, 6, 255, 0);
+  padding-right: 40px;
+  color:#fff;
+}
+ 
+.iframe1 {
+  position: relative;
+  top: auto;
+  height: 240px;
+  width: 320px;
+  border: none;
+  transition: filter 20s ease;
+}
+
+.iframe-container {
+
+position: relative;
+width: 15%;
+overflow: hidden;
+margin-top: 700px;
+filter: brightness(100%);
+padding: 3px;
+}
+
+.iframe-container1 {
+
+position: relative;
+margin-top: auto;
+width: 100%;
+overflow: hidden;
+filter: brightness(100%);
+}
+
+.h1 {
+
+  margin-top: -1000px;
+  filter: brightness(70%);
+  letter-spacing: 1px;
+  font-size: 34px;
+  padding-left: 0px;
+  position: static;
+  margin-left: 6%;
+}
+
+.h2 {
+
+margin-top: 300px;
+filter: brightness(70%);
+letter-spacing: 1px;
+font-size: 34px;
+padding-left: 24px;
+position: static;
+margin-left: 7%;
+}
+
+.h3 {
+margin-top: 300px;
+filter: brightness(70%);
+letter-spacing: 1px;
+font-size: 34px;
+padding-left: 64px;
+position: static;
+margin-left: 8%; 
+}
+
+.div1 {
+
+  margin-left: 6%; 
+}
+
+.div2 {
+
+  margin-top: -600px;
+  margin-left: 6%;
+}
+
+.div3 {
+
+margin-top: -600px;
+margin-left: 6%;
+}
+
+</style>
+</header>
+<body>
+
+ <main class="main">
+  <aside class="sidebar">
+    <nav class="nav">
+      <ul>
+        <li class="active"><a href="#">Welcome</a></li>
+        <li><a href="#">Who We Are</a></li>
+        <li><a href="#">Why Noize And Not Twitch</a></li>
+        <li><a href="#">Get In Touch</a></li>
+      </ul>
+    </nav>
+  </aside>
+</main>
+
+
+
+<div class="div1">
+<iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe>
+
+<iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+</iframe> 
+</div>
+
+<div class="div2">
+  <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe>
+  
+  <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+  </iframe> 
+  </div>
+
+  <div class="div3">
+    <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe>
+    
+    <iframe class="iframe1 iframe-container" src="https://stream.portalchat.app/embed/video" scrolling="no" allow="autoplay">  
+    </iframe> 
+    </div>
+
+  <p class="h1">
+    Gaming
+  </p>
+
+  <p class="h2">
+    Creative
+  </p>
+
+  <p class="h3">
+    Chill
+  </p>
+
+
+
+    <div 
+    class="search-box">
+    <input 
+    type="text" class="input-search" placeholder="Type to Search...">
+    </input>
+    </div>
+
+
+
+
+
+</body>
+</html>
